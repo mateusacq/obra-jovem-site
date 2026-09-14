@@ -2,7 +2,8 @@
 
 ## Endpoint: / (homepage, index.html)
   - PALETA DE CORES: preto, amarelo, branco, azul escuro, cores da bandeira do vaticano
-  - HEADER: Logo da OJ + Obra Jovem Site
+  - HEADER: Logo da OJ + Obra Jovem Site, fundo amarelo e escrito em preto ou branco
+  - FOOTER: fundo preto, escrito branco, contato
   - MENU DINÂMICO:
     - Inicio, sobre nós, obras, eventos, equipe, contato
     - Todos os elementos sao clicaveis e scrollam para a seçao correspondente dele na pagina (com o trem do #)
@@ -32,7 +33,7 @@
   - Caixas organizadas de maneira hierárquica, com os cargos mais altos em cima
 
 ## Endpoint: /#contato
-  - Vai ser so um quadrado preto com os contatos da OJ la embaixao 
+  - Footer do site
 
 ## Endpoint: /obras
   - PALETA DE CORES DEPENDE DE CADA OBRA (consultar instagrans da comunicação)
@@ -61,4 +62,5 @@ não expor versão de server nem nada
 não expor a linguagem que o backend foi escrito
 
 # CHECKLIST
-- [ ]
+- [ ] Fazer header do site
+- [ ] Fazer footer do site (contato)
