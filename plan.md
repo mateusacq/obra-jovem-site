@@ -8,7 +8,14 @@
     - Inicio, sobre nós, obras, eventos, equipe, contato
     - Todos os elementos sao clicaveis e scrollam para a seçao correspondente dele na pagina (com o trem do #)
     - Elemento "eventos" expande para duas opções: "retiros" e "calendario"
-  - Opção de modo escuro e modo claro eh sonhar mt?
+  - Funcionalidade de dark/light mode (envolve só um pouco de JavaScript)
+
+  ### Templates bons:
+  - https://startbootstrap.com/theme/agency
+  - https://startbootstrap.com/theme/grayscale
+  - https://html5up.net/dimension
+  - https://html5up.net/alpha
+  - https://html5up.net/prologue
 
 ## Endpoint: /#inicio
   - Mensagem legal na capa
@@ -22,11 +29,12 @@
   - Fazer uma caixinha de cada obra, colocar a descrição dela, uma logo png com mascara e cor correspondente, o título com seu nome e o @ no instagram da obra correspondente no subtitulo
   - Colocar uma foto da obra atras da logo tambem
   - Exemplo de caixinha no powerpoint que montei
+  - A descrição da obra eu posso pegar do instagram da obra correspondente, no post "quem somos nós" fixado neles que normalmente tem
 
 ## Endpoint: /#eventos
   - Titulo: Eventos
   - Subtitulo: saiba mais sobre nossos eventos:
-  - Dois botoes: "retiros" e "calendario", cada um redirecionando para a página correspondente, hiperlinks
+  - Dois botoes: "calendario", "retiros", cada um redirecionando para a página correspondente, hiperlinks
 
 ## Endpoint: /#equipe
   - Caixas com cada pessoa da equipe, com foto, nome e cargo
@@ -38,7 +46,12 @@
 ## Endpoint: /obras
   - PALETA DE CORES DEPENDE DE CADA OBRA (consultar instagrans da comunicação)
   - /obras/crisma, /obras/d1, /obras/d2, /obras/kayros, /obras/god
-  
+  - Seção de inscrições em tudo (vindo da linktree) no /obras e inscrições em cada obra individualmente também
+
+## Endpoint: /obras/crisma
+  - Colocar verificação se a pessoa confessou pra crismar 
+    - Usar um Formulário. Adicionar uma caixa de seleção (Checkbox) obrigatória dizendo: "Declaro perante Deus e a Igreja que realizei o sacramento da confissão em preparação para a Crisma". Também pedir a foto que comprova isso (ver o que coords acham).
+
 ## Endpoint: /retiros
 - Seção usuário comum:
   - Forms de inscrição
@@ -51,16 +64,49 @@
 ## Endpoint: /calendario
   - Lista de eventos com data, descrição e local
   - Adaptado do pdf da sarah
-
-## Endpoint: /admin
-  - página de administração do site
-  - requer autenticação
-  - permite gerenciar membros da coordenação com permissões superiores no site
+  - Sugestão de Ouro do Gemini: criar uma agenda pública no Google Agenda para a Obra Jovem e incorporar (embed) essa agenda na página /calendario. Assim, quando a coordenação atualizar o Google Agenda no celular, o site atualiza sozinho. (falar disso com a Sarah e falar que o LITC usa isso também).
 
 # SEGURANÇA E AUTENTICAÇÃO:
 não expor versão de server nem nada 
 não expor a linguagem que o backend foi escrito
 
 # CHECKLIST
-- [ ] Fazer header do site
+- [X] Obter favicon.svg da obrajovem pra aparecer la em cima na aba do navegador
+- [ ] Fazer header do site (com menu dinâmico)
+  - [ ] Modificar navbar-logo.svg para favicon + texto obrajovem
+- [ ] Descobrir como replicar esse header pro site todo
 - [ ] Fazer footer do site (contato)
+- [ ] Editar apenas os textos do HTML
+- [ ] Modificar a fonte para o que eu quero
+- [ ] Rever a estrutura do HTML
+- [ ] Inicialmente, hospedar a versão 1.0 (apenas com features estáticas) no GitHub Pages ou Netlify ou Vercel
+
+# 🔴 O que é MUITO DIFÍCIL e deve ficar para a Versão 2.0 (Alerta)
+
+1. Autenticação e Administração (/login, /signup, /admin, /avisos)
+
+    O problema: Criar um sistema de login seguro do zero envolve criptografia de senhas, proteção contra ataques (como injeção de SQL), controle de sessão (cookies/tokens) e recuperação de senha por e-mail. É o tipo de coisa que não se deve fazer do zero sem experiência, pois lida com dados sensíveis (LGPD) dos membros da igreja.
+
+    O problema da área de coordenação em /retiros: Construir um checklist interativo exclusivo para administradores transforma seu site num "Trello" ou "Notion".
+
+    A Solução (Como trocar para algo simples):
+
+        Corte o login e o admin da Versão 1. Faça o site ser 100% público, focado em divulgar a Obra Jovem.
+
+        Para a gestão da coordenação (checklists, links pro Drive), continuem usando um grupo no WhatsApp, o Trello ou o Notion. Não tente reinventar a roda construindo um sistema de gestão dentro do site da igreja agora.
+
+        Para a página de /avisos, em vez de criar um painel de administração onde a comunicação digita os avisos, considere usar ferramentas que transformam o Instagram ou um canal do Telegram em um mural de recados no site, ou simplesmente atualize o código manualmente uma vez por mês.
+
+## Endpoint: /login
+  - Página de login do servo ou do coordenador
+
+## Endoint: /signup
+  - Página de cadastro de novo servou ou coordenador
+
+## Endpoint: /avisos
+  - Aba onde a comunicação vai mexer mais
+
+## Endpoint: /admin
+  - página de administração do site
+  - requer autenticação
+  - permite gerenciar membros da coordenação com permissões superiores no site
