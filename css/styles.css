@@ -57,7 +57,7 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: DM Sans, Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -129,7 +129,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "DM Sans", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
 }
@@ -10852,7 +10852,7 @@ p {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
@@ -10863,8 +10863,21 @@ p {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "DM Sans", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-bottom: 4rem;
+}
+
+/* Aplica apenas os ajustes de alinhamento e largura no h5 para a seção sobre nós */
+.page-section h5.section-subheading, .page-section .section-subheading.h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: regular;
+  font-family: "DM Sans", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 4rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -10892,7 +10905,7 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: #000;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10934,20 +10947,20 @@ p {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    height: 2rem;
+    height: 2.5rem;
     transition: height 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529;
+    background-color: #000;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
   #mainNav.navbar-shrink .navbar-brand svg,
   #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    height: 2rem;
   }
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
@@ -10956,17 +10969,21 @@ p {
     margin-right: 0;
   }
 }
+
 header.masthead {
   padding-top: 10.5rem;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  /* Adiciona uma camada preta semi-transparente por cima da foto de todo mundo da obra */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/img/foto_geral.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  background-color: #000;
 }
+
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
@@ -11180,6 +11197,27 @@ header.masthead .masthead-heading {
 .timeline .timeline-body > p {
   margin-bottom: 0;
 }
+/* --- Galeria do Lado Oposto da Timeline --- */
+.timeline-media { /* Estilo padrão (Dispositivos Móveis) */
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px 0 100px;
+    clear: both;
+}
+
+.timeline-media .media-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px; /* Cantos levemente arredondados */
+    border: 2px solid #e9ecef;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.timeline-media .media-thumb:hover {
+    transform: scale(1.08); /* Efeito suave ao passar o mouse */
+}
 
 @media (min-width: 768px) {
   .timeline:before {
@@ -11211,6 +11249,30 @@ header.masthead .masthead-heading {
     padding: 0 30px 20px 20px;
     text-align: left;
   }
+  .timeline-media {
+     float: right;
+     width: 41%;
+     padding: 0 30px 0 20px;
+     clear: none;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     align-content: center;
+     /* grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); */
+     min-height: 100px;
+     gap: 12px;
+  }
+
+  .timeline-media .media-thumb {
+    width: calc(50% - 6px);
+    height: 75px;
+  }
+
+  /* Caso o item da timeline seja invertido (.timeline-inverted) */
+  .timeline > li.timeline-inverted > .timeline-media {
+    float: left;
+    padding: 0 20px 0 30px;
+  }
 }
 @media (min-width: 992px) {
   .timeline > li {
@@ -11232,6 +11294,9 @@ header.masthead .masthead-heading {
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 20px 20px;
   }
+  .timeline-media {
+    min-height: 150px;
+  }
 }
 @media (min-width: 1200px) {
   .timeline > li {
@@ -11250,6 +11315,18 @@ header.masthead .masthead-heading {
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
+  }
+  .timeline-media {
+    min-height: 180px;
+    padding: 0 100px 0 20px;
+  }
+
+  .timeline > li.timeline-inverted > .timeline-media {
+    padding: 0 20px 0 100px;
+  }
+
+  .timeline-media .media-thumb {
+    height: 90px;
   }
 }
 .team-member {

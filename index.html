@@ -13,6 +13,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Outras fontes definidas no styles.css-->
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -20,14 +21,14 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brfand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-oj-logo.svg" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#page-top">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="#sobre-nos">Sobre nós</a></li>
                         <li class="nav-item"><a class="nav-link" href="#obras">Obras</a></li>
                         <li class="nav-item"><a class="nav-link" href="#eventos">Eventos</a></li>
@@ -38,50 +39,117 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead" id="inicio">
             <div class="container">
                 <div class="masthead-subheading">Bem vindo ao nosso site!</div>
                 <div class="masthead-heading text-uppercase">Somos a Obra Jovem</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#sobre-nos">Conheça-nos</a>
             </div>
         </header>
-        <!-- Services-->
-        <section class="page-section" id="services">
+        <!-- Sobre nós (aqui da pra colocar a timeline tb, ta propicio)-->
+        <section class="page-section" id="sobre-nos">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Sobre nós</h2>
+                    <h5 class="section-subheading mb-3">Somos um projeto que nasceu para unir a juventude da nossa paróquia (Nossa Senhora da Divina Providência, localizada em Belo Horizonte) e fortalecer nossa caminhada de fé!</h5>
+                    <h3 class="section-subheading text-muted">Um pouco dos nossos 30 anos de história:</h3>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Início da década de 1990</h4>
+                                <h4 class="subheading">Largada</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">A OJDP (Obra Jovem da Divina Providência) começou com o Grupo de Jovens "Construir a Esperança".</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Início da década de 2000</h4>
+                                <h4 class="subheading">MMDP</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">O MMDP (composto pelos jovens da então OJDP) lançava seu CD autoral (ele está disponível no Spotify!)</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" title="Maanaim 2011" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2011-2015</h4>
+                                <h4 class="subheading">Maanaim</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">A nossa Obra já realizou algumas vezes o Acampamento Maanaim, focado na formação de lideranças.</p></div>
+                        </div>
+                        <div class="timeline-media">
+                                <img src="assets/img/about/3-extra1.jpg" alt="Foto Maanaim 1" title="Maanaim 2012" class="media-thumb" />
+                                <img src="assets/img/about/3-extra2.jpg" alt="Foto Maanaim 2" title="Maanaim 2015" class="media-thumb" />
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." title="Crisma 2018" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2016-2021</h4>
+                                <h4 class="subheading">Crisma</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">De 2016 a 2021, apenas a Crisma manteve seus encontros.</p></div>
+                        </div>
+                        <div class="timeline-media">
+                                <img src="assets/img/about/4-extra1.jpg" alt="..." title="Crisma 2020/2021" class="media-thumb" />
+                                <img src="assets/img/about/4-extra2.jpg" alt="..." title="Crisma 2025" class="media-thumb" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/5.jpg" title="D1 2025" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2022-Presente</h4>
+                                <h4 class="subheading">Discipulados</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">A primeira turma do Discipulado aconteceu em 2022 e tinha apenas 4 integrantes. Hoje são mais de 100 integrantes em todos os discipulados!</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/6.jpg" title="Kayrós 2026" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2025-Presente</h4>
+                                <h4 class="subheading">Kayrós</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">As crianças também não ficaram de fora: depois de termos mais servos formados, o Kayrós foi criado para acolhermos as crianças de 12 a 15 anos da paróquia.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/7.jpg" title="Foto geral Retirão 2025" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>1990-Presente</h4>
+                                <h4 class="subheading">Carregando...</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Atualmente, temos mais de 400 integrantes, contando todas as obras!</p></div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Faça parte
+                                <br />
+                                da nossa
+                                <br />
+                                história!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
-        <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
+        <!--Obras-->
+        <section class="page-section bg-light" id="obras">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Portfolio</h2>
@@ -181,70 +249,43 @@
                 </div>
             </div>
         </section>
-        <!-- About-->
-        <section class="page-section" id="about">
+        <!--Eventos (calendário + retiros-->
+        <section class="page-section" id="eventos">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h2 class="section-heading text-uppercase">Services</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>December 2015</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">E-Commerce</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Responsive Design</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Web Security</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- Team-->
-        <section class="page-section bg-light" id="team">
+        <!-- Equipe-->
+        <section class="page-section bg-light" id="equipe">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
@@ -306,8 +347,8 @@
                 </div>
             </div>
         </div>
-        <!-- Contact-->
-        <section class="page-section" id="contact">
+        <!-- Contato-->
+        <section class="page-section" id="contato">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
