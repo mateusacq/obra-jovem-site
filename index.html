@@ -30,8 +30,30 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="#sobre-nos">Sobre nós</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#obras">Obras</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#eventos">Eventos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#obras" id="navbarDropdownObras" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Obras
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownObras">
+                                <li><a class="dropdown-item" href="#obras">Todas as Obras</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/obras/kayros">Kayrós</a></li>
+                                <li><a class="dropdown-item" href="/obras/crisma">Crisma</a></li>
+                                <li><a class="dropdown-item" href="/obras/discipulado">Discipulado</a></li>
+                                <li><a class="dropdown-item" href="/obras/god">GOD</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#eventos" id="navbarDropdownEventos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Eventos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownEventos">
+                                <li><a class="dropdown-item" href="#eventos">Seção de Eventos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/calendario">Calendário</a></li>
+                                <li><a class="dropdown-item" href="/retiros">Retiros</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="#equipes">Equipes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                     </ul>
@@ -258,32 +280,46 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p class="text-muted">Lead Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="assets/img/equipes/secreta.jpg" alt="..." />
+                            <h4>Secretaria</h4>
+                            <p class="text-muted px-5">Trabalhadoras e fofuxas!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member featured">
+                            <img class="mx-auto rounded-circle" src="assets/img/equipes/conselho.jpg" alt="..." />
+                            <h4>Conselho</h4>
+                            <p class="text-muted px-5">Composto pelas coordenações e líderes principais da obra.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="assets/img/equipes/inter.jpg" alt="..." />
+                            <h4>Intercessão</h4>
+                            <p class="text-muted px-5">Os responsáveis por conectar o trabalho material da obra à realidade elevada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/equipes/comunicacao.jpg" alt="..." />
+                            <h4>Comunicação</h4>
+                            <p class="text-muted px-5">Ministério responsável pela evangelização por meio de qualquer mídia / veículo de comunicação.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="assets/img/equipes/catequistas_ai_slop.png" alt="..." />
+                            <h4>Catequistas</h4>
+                            <p class="text-muted px-5">Líderes que têm contato direto com os membros de cada obra e contribuem pela linha de frente na formação espiritual deles.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto team-logo" src="assets/img/equipes/mm.png" alt="..." />
+                            <h4>Ministério de Música (MMOJ)</h4>
+                            <p class="text-muted px-5">Ministério responsável pela música nas missas, nos encontros das obras e nos reetiros.</p>
                         </div>
                     </div>
                 </div>
@@ -359,10 +395,10 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer py-4">
+        <footer class="footer py-4 bg-dark">
             <div class="container">
                 <div class="text-center">
-                    <h3 class="section-subheading fst-normal">Ou, então, utilize um dos meios abaixo:</h3>
+                    <h3 class="section-subheading fst-normal text-white">Entre em contato também por:</h3>
                 </div>
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start"> </div>

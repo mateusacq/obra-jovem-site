@@ -10880,7 +10880,7 @@ p {
   font-weight: 400;
   font-style: italic;
   font-family: "DM Sans", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 .footer h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
@@ -10993,7 +10993,42 @@ p {
     margin-right: 0;
   }
 }
+/* Estilização da caixa de opções do Dropdown */
+#mainNav .dropdown-menu {
+    background-color: #000; /* Fundo preto combinado com a navbar */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+}
 
+/* Estilo de cada item do menu */
+#mainNav .dropdown-item {
+    color: #fff;
+    font-family: "DM Sans", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.0625em;
+    padding: 0.5rem 1.25rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Efeito ao passar o mouse ou focar no item */
+#mainNav .dropdown-item:hover,
+#mainNav .dropdown-item:focus {
+    background-color: rgba(255, 200, 0, 0.2); /* Fundo amarelado suave */
+    color: #ffc800; /* Texto em amarelo ouro */
+}
+
+/* Linha divisória */
+#mainNav .dropdown-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (min-width: 992px) {
+    #mainNav .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 3rem;
@@ -11399,11 +11434,36 @@ header.masthead .masthead-heading {
 .team-member img {
   width: 14rem;
   height: 14rem;
-  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  border: 4px solid #ffc800;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  object-position: center; /* Centraliza a imagem dentro do espaço */
+}
+/* Regra especial para Logos com fundo transparente / vetor (ex.: MMOJ) */
+.team-member img.team-logo {
+  object-fit: contain;   /* Encaixa o logo inteiro dentro do espaço sem cortar */
+  border: none !important; /* Remove bordas externas caso o tema aplique */
+  padding: 0;
 }
 .team-member h4, .team-member .h4 {
   margin-top: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
+}
+.team-member p {
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .team-member.featured {
+    transform: scale(1.12) translateY(-35px); /* Aumenta 12% e desce/sobe no eixo Y */
+    z-index: 2; /* Garante que sombras ou elementos do card do meio fiquem por cima dos lados */
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Opcional: Aumentar a foto do elemento central um pouco mais */
+  .team-member.featured img {
+    border: 4px solid #fad85c; /* Opcional: Adiciona uma borda de destaque na foto central */
+  }
 }
 
 .img-brand {
