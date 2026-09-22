@@ -1,7 +1,6 @@
 # ESTRUTURA:
 
 ## Endpoint: / (homepage, index.html)
-  - PALETA DE CORES: preto, amarelo, branco, azul escuro, cores da bandeira do vaticano
   - HEADER: Logo da OJ + Obra Jovem Site, fundo amarelo e escrito em preto ou branco
   - FOOTER: fundo preto, escrito branco, contato
   - MENU DINÂMICO:
@@ -16,20 +15,11 @@
   - https://html5up.net/dimension
   - https://html5up.net/alpha
   - https://html5up.net/prologue
+  - React tb tem outros bons
 
 ## Endpoint: /#inicio
   - Mensagem legal na capa
   - Foto legal tb (talvez foto de todo mundo junto)
-
-## Endpoint: /#sobre-nos
-  - Colocar uma foto da divina bonitona atrás e escrever o sobre nós
-  - Titulo: sobre nos
-  - Subtitulo: @obrajovemdp (hiperlink pro instagram)
-  - Sobre nós: "Somos a pastoral da Obra Jovem da paróquia Nossa Senhora da Divina Providência."
-  - Fazer uma caixinha de cada obra, colocar a descrição dela, uma logo png com mascara e cor correspondente, o título com seu nome e o @ no instagram da obra correspondente no subtitulo
-  - Colocar uma foto da obra atras da logo tambem
-  - Exemplo de caixinha no powerpoint que montei
-  - A descrição da obra eu posso pegar do instagram da obra correspondente, no post "quem somos nós" fixado neles que normalmente tem
 
 ## Endpoint: /#eventos
   - Titulo: Eventos
@@ -37,17 +27,13 @@
   - Dois botoes: "calendario", "retiros", cada um redirecionando para a página correspondente, hiperlinks
 
 ## Endpoint: /#equipe
-  - Caixas com cada pessoa da equipe, com foto, nome e cargo
+  - Caixas com cada ministério / equipe, com foto, nome e cargo
   - Caixas organizadas de maneira hierárquica, com os cargos mais altos em cima
-
-## Endpoint: /#contato
-  - Footer do site
 
 ## Endpoint: /obras
   - PALETA DE CORES DEPENDE DE CADA OBRA (consultar instagrans da comunicação)
   - /obras/crisma, /obras/d1, /obras/d2, /obras/kayros, /obras/god
-  - Seção de inscrições em tudo (vindo da linktree) no /obras e inscrições em cada obra individualmente também
-
+  
 ## Endpoint: /obras/crisma
   - Colocar verificação se a pessoa confessou pra crismar 
     - Usar um Formulário. Adicionar uma caixa de seleção (Checkbox) obrigatória dizendo: "Declaro perante Deus e a Igreja que realizei o sacramento da confissão em preparação para a Crisma". Também pedir a foto que comprova isso (ver o que coords acham).
@@ -67,18 +53,12 @@
   - Sugestão de Ouro do Gemini: criar uma agenda pública no Google Agenda para a Obra Jovem e incorporar (embed) essa agenda na página /calendario. Assim, quando a coordenação atualizar o Google Agenda no celular, o site atualiza sozinho. (falar disso com a Sarah e falar que o LITC usa isso também).
 
 # SEGURANÇA E AUTENTICAÇÃO:
-não expor versão de server nem nada 
+não expor versão de server nem versão de nada em nenhuma parte do site
 não expor a linguagem que o backend foi escrito
 
 # CHECKLIST
-- [X] Obter favicon.svg da obrajovem pra aparecer la em cima na aba do navegador
-- [ ] Fazer header do site (com menu dinâmico)
-  - [ ] Modificar navbar-logo.svg para favicon + texto obrajovem
-- [ ] Descobrir como replicar esse header pro site todo
-- [ ] Fazer footer do site (contato)
-- [ ] Editar apenas os textos do HTML
-- [ ] Modificar a fonte para o que eu quero
-- [ ] Rever a estrutura do HTML
+- [ ] Descobrir como replicar o header pro site todo
+- [ ] Colocar fundo preto no footer do site
 - [ ] Inicialmente, hospedar a versão 1.0 (apenas com features estáticas) no GitHub Pages ou Netlify ou Vercel
 
 # 🔴 O que é MUITO DIFÍCIL e deve ficar para a Versão 2.0 (Alerta)
