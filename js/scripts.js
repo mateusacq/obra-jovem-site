@@ -5,7 +5,42 @@
 */
 //
 // Scripts
-// 
+//
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+
+    // Verifica a preferência salva no armazenamento do navegador
+    const currentTheme = localStorage.getItem('theme');
+
+    // Aplica o tema escuro imediatamente se estiver salvo
+    if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if(themeIcon) {
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+    }
+
+    // Lógica de alternância ao clicar no botão
+    if (themeToggle) {
+        themeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            let theme = document.documentElement.getAttribute('data-theme');
+
+            if (theme === 'dark') {
+                // Muda para claro
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                // Muda para escuro
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        });
+    }
+});
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -23,7 +58,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
+    // Shrink the navbar
     navbarShrink();
 
     // Shrink the navbar when page is scrolled

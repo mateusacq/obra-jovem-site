@@ -16,6 +16,13 @@
         <!-- Outras fontes definidas no styles.css-->
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -56,6 +63,11 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#equipes">Equipes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="theme-toggle" aria-label="Alternar tema">
+                                <i class="fas fa-moon fs-5"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -619,8 +631,6 @@
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
