@@ -5379,6 +5379,22 @@ textarea.form-control-lg {
   padding: var(--bs-modal-padding);
 }
 
+/* Container/Formato quadrado e redução de tamanho */
+.modal-img-custom {
+  width: 250px;           /* Largura fixa menor da imagem */
+  height: 250px;          /* Altura igual para formar um quadrado perfeito */
+  object-fit: cover;      /* Corta e encaixa a imagem proporcionalmente sem achatar */
+  object-position: center;/* Garante o foco no centro da imagem */
+  border-radius: 12px;    /* Opcional: cantos suavemente arredondados */
+  transition: transform 0.3s ease-in-out; /* Prepara a animação suave de zoom */
+  cursor: pointer;
+}
+
+/* Efeito de Zoom (Scaling) ao passar o mouse */
+.modal-img-custom:hover {
+  transform: scale(1.08); /* Aplica o zoom de 8% na imagem */
+}
+
 .modal-footer {
   display: flex;
   flex-shrink: 0;
@@ -10866,6 +10882,14 @@ p {
   font-family: "DM Sans", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-bottom: 4rem;
 }
+.footer h3.section-subheading, .page-section .section-subheading.h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "DM Sans", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 1rem;
+}
+
 
 /* Aplica apenas os ajustes de alinhamento e largura no h5 para a seção sobre nós */
 .page-section h5.section-subheading, .page-section .section-subheading.h5 {
@@ -11088,12 +11112,12 @@ header.masthead .masthead-heading {
 }
 
 .portfolio-modal .modal-dialog {
-  margin: 1rem;
+  margin: 1rem auto;
   max-width: 100vw;
 }
 .portfolio-modal .modal-content {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
