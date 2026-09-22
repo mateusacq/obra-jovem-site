@@ -11018,17 +11018,32 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
-#portfolio .portfolio-item {
-  max-width: 26rem;
+#portfolio .portfolio-item,
+#obras .portfolio-item {
+  width: 100%;
+  max-width: 22rem;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  height: 100%; /* Força todas as caixas a terem a mesma altura */
 }
-#portfolio .portfolio-item .portfolio-link {
+#portfolio .portfolio-item img,
+#obras .portfolio-item img {
+  width: 100%;
+  height: 250px; /* Define altura fixa para todas as imagens */
+  object-fit: cover;
+  object-position: center; /* Centraliza a imagem dentro do contêiner */
+}
+#portfolio .portfolio-item .portfolio-link,
+#obras .portfolio-item .portfolio-link {
   position: relative;
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: 250px; /* Mesma altura definida para as imagens */
+  overflow: hidden;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover,
+#obras .portfolio-item .portfolio-link .portfolio-hover {
   display: flex;
   position: absolute;
   width: 100%;
@@ -11039,27 +11054,37 @@ header.masthead .masthead-heading {
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content,
+#obras .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
   color: white;
 }
-#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover,
+#obras .portfolio-item .portfolio-link:hover .portfolio-hover {
   opacity: 1;
 }
-#portfolio .portfolio-item .portfolio-caption {
-  padding: 1.5rem;
+#portfolio .portfolio-item .portfolio-caption,
+#obras .portfolio-item .portfolio-caption {
+  padding: 1.25rem 1rem;
   text-align: center;
   background-color: #fff;
+  flex-grow: 1; /* Preenche o espaço restante uniformemente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o texto verticalmente */
 }
-#portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-  font-size: 1.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading,
+#obras .portfolio-item .portfolio-caption .portfolio-caption-heading {
+  font-size: 1.25rem;
+  font-family: "DM Sans", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
 }
-#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading,
+#obras .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+  font-size: 0.9rem;
   font-style: italic;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "DM Sans", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .portfolio-modal .modal-dialog {
@@ -11329,6 +11354,20 @@ header.masthead .masthead-heading {
     height: 90px;
   }
 }
+
+/* Tamanho do ícone SVG equivalente ao fa-stack (fa-4x) */
+.evento-svg-icon {
+  width: 8rem;  /* Aproximadamente o tamanho da pilha FontAwesome original */
+  height: 8rem;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out; /* Transição para o efeito suave */
+}
+
+/* Efeito de zoom ao passar o mouse sobre o link do ícone */
+.evento-icon-link:hover .evento-svg-icon {
+  transform: scale(1.08); /* Aumenta ligeiramente o ícone no hover */
+}
+
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
