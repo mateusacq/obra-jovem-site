@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (isDark) {
         themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        themeIcon.classList.add('fa-lightbulb');
       } else {
-        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.remove('fa-lightbulb');
         themeIcon.classList.add('fa-moon');
         }
       }
@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('data-theme', 'dark');
         if(themeIcon) {
           themeIcon.classList.remove('fa-moon');
-          themeIcon.classList.add('fa-sun');
+          themeIcon.classList.add('fa-lightbulb');
         }
     } else {
       // Se for claro ou não definido, garante LUA
       if(themeIcon) {
-        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.remove('fa-lightbulb');
         themeIcon.classList.add('fa-moon');
       }
     }
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('theme', 'light');
 
                 if(themeIcon) {
-                  themeIcon.classList.remove('fa-sun');
+                  themeIcon.classList.remove('fa-lightbulb');
                   themeIcon.classList.add('fa-moon');
                 }
             } else {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('theme', 'dark');
                 if(themeIcon) {
                   themeIcon.classList.remove('fa-moon');
-                  themeIcon.classList.add('fa-sun');
+                  themeIcon.classList.add('fa-lightbulb');
                 }
             }
 
