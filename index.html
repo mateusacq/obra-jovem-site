@@ -4,20 +4,16 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Site da obra jovem" />
-        <meta name="author" content="Mateus Antinossi (Matdog)" />
+        <meta name="author" content="Mateus (Matdog)" />
         <title>Obra Jovem DP</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Outras fontes definidas no styles.css-->
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
         <script>
             if (localStorage.getItem('theme') === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
@@ -212,7 +208,10 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/obras/crisma.png" alt="..." />
+                                <!-- Imagem para Modo Claro -->
+                                <img class="img-fluid img-light-mode" src="assets/img/obras/crisma.png" alt="Crisma" />
+                                <!-- Imagem para Modo Escuro -->
+                                <img class="img-fluid img-dark-mode" src="assets/img/obras/crisma-dark.png" alt="Crisma" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Crisma</div>
@@ -221,7 +220,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5 col-sm-6">
-                        <!-- Portfolio item 3-->
+                        <!-- Obras item 3-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
@@ -236,13 +235,16 @@
                         </div>
                     </div>
                     <div class="col-lg-5 col-sm-6">
-                        <!-- Portfolio item 4-->
+                        <!-- Obras item 4-->
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/obras/god.png" alt="..." />
+                                <!-- Imagem para Modo Claro -->
+                                <img class="img-fluid img-light-mode" src="assets/img/obras/god.png" alt="GOD" />
+                                <!-- Imagem para Modo Escuro -->
+                                <img class="img-fluid img-dark-mode" src="assets/img/obras/god-dark.png" alt="GOD" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Grupo de oração da Divina (GOD)</div>
@@ -458,18 +460,28 @@
                                         </li>
                                     </ul>
                                     <div class="mb-4">
-                                        <a class="btn btn-outline-dark text-uppercase rounded-pill px-3" href="https://www.instagram.com/kayrosdp" target="_blank" rel="noopener noreferrer">
+                                        <a class="btn btn-light-mode btn-outline-dark text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
                                             <i class="fab fa-instagram me-2"></i>
                                             Instagram
                                         </a>
-                                        <!--class btn-warning deixa o botão amarelo (da cor do tema)-->
-                                        <a class="btn btn-outline-dark text-uppercase rounded-pill px-4 fw-bold"
-                                               href="https://docs.google.com/forms/d/e/1FAIpQLScK7MxkiqfZlYqs4PfSZvsA5GwI3_29L3Tyo1hk34BxsgnfDA/viewform"
+                                        <a class="btn btn-light-mode btn-outline-dark text-uppercase rounded-pill px-4 fw-bold"
+                                               href="https://docs.google.com/forms/d/e/1FAIpQLSfj95Og0Kl5_Eu4VjLU4IR-VQiJ0xqUNi0ymdblnjkDI7SSuA/viewform"
                                                target="_blank"
                                                rel="noopener noreferrer">
                                                 <i class="fas fa-file-pen me-2"></i>
                                                 Inscrições
                                         </a>
+                                        <a class="btn btn-dark-mode btn-outline-light text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-instagram me-2"></i>
+                                            Instagram
+                                        </a>
+                                        <a class="btn btn-dark-mode btn-outline-light text-uppercase rounded-pill px-4 fw-bold"
+                                               href="https://docs.google.com/forms/d/e/1FAIpQLSfj95Og0Kl5_Eu4VjLU4IR-VQiJ0xqUNi0ymdblnjkDI7SSuA/viewform"
+                                               target="_blank"
+                                               rel="noopener noreferrer">
+                                                <i class="fas fa-file-pen me-2"></i>
+                                                Inscrições
+                                        </a>>
                                     </div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
@@ -494,7 +506,10 @@
                                     <!-- Project details-->
                                     <h3 class="text-uppercase">Crisma</h3>
                                     <p class="item-intro text-muted">Preparação para o grande momento de crisma.</p>
-                                    <img class="img-fluid d-block mx-auto modal-img-custom" src="assets/img/obras/crisma.png" alt="..." />
+                                    <!-- Imagem para Modo Claro -->
+                                    <img class="img-fluid img-light-mode d-block mx-auto modal-img-custom" src="assets/img/obras/crisma.png" alt="Crisma" />
+                                    <!-- Imagem para Modo Escuro -->
+                                    <img class="img-fluid img-dark-mode d-block mx-auto modal-img-custom" src="assets/img/obras/crisma-dark.png" alt="Crisma" />
                                     <p>Nesta obra, fazemos uma série de encontros de oração e formação, incluindo dois retiros (Kerigma e Doa Tua Vida) para preparar os jovens para receber o Sacramento do Crisma. Após esse período, o crismando poderá afirmar a sua maturidade na fé diante da Igreja e receber o Espírito Santo.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -507,12 +522,22 @@
                                         </li>
                                     </ul>
                                     <div class="mb-4">
-                                        <a class="btn btn-outline-dark text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
+                                        <a class="btn btn-light-mode btn-outline-dark text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
                                             <i class="fab fa-instagram me-2"></i>
                                             Instagram
                                         </a>
-                                        <!--class btn-warning deixa o botão amarelo (da cor do tema)-->
-                                        <a class="btn btn-outline-dark text-uppercase rounded-pill px-4 fw-bold"
+                                        <a class="btn btn-light-mode btn-outline-dark text-uppercase rounded-pill px-4 fw-bold"
+                                               href="https://docs.google.com/forms/d/e/1FAIpQLSfj95Og0Kl5_Eu4VjLU4IR-VQiJ0xqUNi0ymdblnjkDI7SSuA/viewform"
+                                               target="_blank"
+                                               rel="noopener noreferrer">
+                                                <i class="fas fa-file-pen me-2"></i>
+                                                Inscrições
+                                        </a>
+                                        <a class="btn btn-dark-mode btn-outline-light text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-instagram me-2"></i>
+                                            Instagram
+                                        </a>
+                                        <a class="btn btn-dark-mode btn-outline-light text-uppercase rounded-pill px-4 fw-bold"
                                                href="https://docs.google.com/forms/d/e/1FAIpQLSfj95Og0Kl5_Eu4VjLU4IR-VQiJ0xqUNi0ymdblnjkDI7SSuA/viewform"
                                                target="_blank"
                                                rel="noopener noreferrer">
@@ -557,26 +582,43 @@
                                         </li>
                                     </ul>
                                     <div class="mb-4">
-                                        <a class="btn btn-outline-dark text-uppercase rounded-pill px-3" href="https://www.instagram.com/discipuladodp/" target="_blank" rel="noopener noreferrer">
+                                        <a class="btn btn-light-mode btn-outline-dark text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
                                             <i class="fab fa-instagram me-2"></i>
                                             Instagram
                                         </a>
-                                        <!--class btn-warning deixa o botão amarelo (da cor do tema)-->
-                                        <a class="btn btn-outline-dark text-uppercase rounded-pill px-4 fw-bold"
-                                               href="https://docs.google.com/forms/d/e/1FAIpQLScNaW71gd_lLTTSjoOD-i1OmeQwfUnG9ZDILLF8jO_vy0aEwA/closedform"
+                                        <a class="btn btn-light-mode btn-outline-dark text-uppercase rounded-pill px-4 fw-bold"
+                                               href="https://docs.google.com/forms/d/e/1FAIpQLSfj95Og0Kl5_Eu4VjLU4IR-VQiJ0xqUNi0ymdblnjkDI7SSuA/viewform"
                                                target="_blank"
                                                rel="noopener noreferrer">
                                                 <i class="fas fa-file-pen me-2"></i>
-                                                Inscrições D1
+                                                Inscrições
                                         </a>
-                                        <a class="btn btn-outline-dark text-uppercase rounded-pill px-4 fw-bold"
+                                        <a class="btn btn-light-mode btn-outline-dark text-uppercase rounded-pill px-4 fw-bold"
                                                href="https://docs.google.com/forms/d/e/1FAIpQLSdepMkqHS7LjdIq5kjLTqqdH02_CB_WTcLcSdComrJCEtbTkA/viewform"
                                                target="_blank"
                                                rel="noopener noreferrer">
                                                 <i class="fas fa-file-pen me-2"></i>
                                                 Inscrições D2
                                         </a>
-                                    </div>
+                                        <a class="btn btn-dark-mode btn-outline-light text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-instagram me-2"></i>
+                                            Instagram
+                                        </a>
+                                        <a class="btn btn-dark-mode btn-outline-light text-uppercase rounded-pill px-4 fw-bold"
+                                               href="https://docs.google.com/forms/d/e/1FAIpQLSfj95Og0Kl5_Eu4VjLU4IR-VQiJ0xqUNi0ymdblnjkDI7SSuA/viewform"
+                                               target="_blank"
+                                               rel="noopener noreferrer">
+                                                <i class="fas fa-file-pen me-2"></i>
+                                                Inscrições D1
+                                        </a>
+                                        <a class="btn btn-dark-mode btn-outline-light text-uppercase rounded-pill px-4 fw-bold"
+                                               href="https://docs.google.com/forms/d/e/1FAIpQLSdepMkqHS7LjdIq5kjLTqqdH02_CB_WTcLcSdComrJCEtbTkA/viewform"
+                                               target="_blank"
+                                               rel="noopener noreferrer">
+                                                <i class="fas fa-file-pen me-2"></i>
+                                                Inscrições D2
+                                        </a>
+                                </div>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Fechar
@@ -600,7 +642,10 @@
                                     <!-- Project details-->
                                     <h3 class="text-uppercase">GOD</h3>
                                     <p class="item-intro text-muted">Grupo de oração da Divina</p>
-                                    <img class="img-fluid d-block mx-auto modal-img-custom" src="assets/img/obras/god.png" alt="..." />
+                                    <!-- Imagem para Modo Claro -->
+                                    <img class="img-fluid img-light-mode d-block mx-auto modal-img-custom" src="assets/img/obras/god.png" alt="GOD" />
+                                    <!-- Imagem para Modo Escuro -->
+                                    <img class="img-fluid img-dark-mode d-block mx-auto modal-img-custom" src="assets/img/obras/god-dark.png" alt="GOD" />
                                     <p>Perdeu a inscrição para alguma obra que você queria? Caiu de paraquedas na obra? Quer chamar algum amigo para nos conhecer? O GOD é pra você! Ocorrendo sazonalmente, temos momentos de oração, formação e convivência. Para introduzir alguém à nossa Obra Jovem em uma época fora dos nossos recrutamentos, o GOD é uma das melhores portas de entrada (principalmente para os não convertidos!). Venha participar!</p>
                                     <ul class="list-inline">
                                         <li>
@@ -613,7 +658,11 @@
                                         </li>
                                     </ul>
                                     <div class="mb-4">
-                                        <a class="btn btn-outline-dark text-uppercase rounded-pill px-3" href="https://www.instagram.com/obrajovemdp/" target="_blank" rel="noopener noreferrer">
+                                        <a class="btn btn-light-mode btn-outline-dark text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-instagram me-2"></i>
+                                            Instagram
+                                        </a>
+                                        <a class="btn btn-dark-mode btn-outline-light text-uppercase rounded-pill px-3" href="https://www.instagram.com/crismadp" target="_blank" rel="noopener noreferrer">
                                             <i class="fab fa-instagram me-2"></i>
                                             Instagram
                                         </a>
@@ -636,5 +685,9 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
     </body>
 </html>

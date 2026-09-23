@@ -11080,15 +11080,16 @@ header.masthead .masthead-heading {
 #portfolio .portfolio-item,
 #obras .portfolio-item {
   width: 100%;
-  max-width: 22rem;
+  max-width: 32rem;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  height: 100%; /* Força todas as caixas a terem a mesma altura */
+  flex-direction: row; /* Coloca a imagem e a legenda lado a lado */
+  align-items: stretch; /* Garante que a legenda ocupe toda a altura */
 }
 #portfolio .portfolio-item img,
 #obras .portfolio-item img {
-  width: 100%;
+  width: 250px;
   height: 250px; /* Define altura fixa para todas as imagens */
   object-fit: cover;
   object-position: center; /* Centraliza a imagem dentro do contêiner */
@@ -11097,7 +11098,8 @@ header.masthead .masthead-heading {
 #obras .portfolio-item .portfolio-link {
   position: relative;
   display: block;
-  width: 100%;
+  flex-shrink: 0;
+  width: 250px;
   height: 250px; /* Mesma altura definida para as imagens */
   overflow: hidden;
 }
@@ -11125,7 +11127,7 @@ header.masthead .masthead-heading {
 #portfolio .portfolio-item .portfolio-caption,
 #obras .portfolio-item .portfolio-caption {
   padding: 1.25rem 1rem;
-  text-align: center;
+  text-align: left; /* Alinha o texto à esquerda para combinar com o layout horizontal */
   background-color: #fff;
   flex-grow: 1; /* Preenche o espaço restante uniformemente */
   display: flex;
@@ -11544,8 +11546,9 @@ section#contact form#contactForm :-ms-input-placeholder {
 /* Ajusta o fundo e a cor dos modais, itens do portfólio (Obras) e formulários */
 [data-theme="dark"] .modal-content,
 [data-theme="dark"] .portfolio-caption,
+[data-theme="dark"] .portfolio-item,
 [data-theme="dark"] .form-control {
-    background-color: #2b3035;
+    background-color: #2b3035 !important;
     color: #e9ecef;
 }
 
@@ -11557,4 +11560,61 @@ section#contact form#contactForm :-ms-input-placeholder {
 /* Ajusta a cor dos links dentro dos eventos */
 [data-theme="dark"] #eventos .text-dark {
     color: #e9ecef !important;
+}
+
+/* Por padrão, esconde a imagem do modo escuro */
+.img-dark-mode {
+  display: none !important;
+}
+
+/* Quando o tema escuro estiver ativo, inverte a exibição de imagem e botões */
+body.dark-theme .img-light-mode,
+[data-theme="dark"] .img-light-mode {
+  display: none !important;
+}
+
+body.dark-theme .img-dark-mode,
+[data-theme="dark"] .img-dark-mode {
+  display: block !important;
+}
+
+body.dark-theme .btn-light-mode,
+[data-theme="dark"] .btn-light-mode {
+  display: none !important;
+}
+
+body.dark-theme .btn-dark-mode,
+[data-theme="dark"] .btn-dark-mode {
+  display: inline-block !important;
+}
+
+[data-theme="dark"] .timeline > li .timeline-image {
+  border: 7px solid #ffc800;
+  color: #e9ecef;
+  border-radius: 100%;
+  background-color: #000;
+}
+[data-theme="dark"] .timeline-media .media-thumb {
+    border: 2px solid #ffc800;
+}
+/* Suaviza a transição de cores e fundos nos elementos principais */
+body,
+.page-section,
+.navbar,
+.card,
+.portfolio-item,
+.portfolio-caption,
+.modal-content,
+footer,
+h1, h2, h3, h4, h5, h6,
+p, a, span, div {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* Aplica a transição suave de cores e evita tela piscando no carregamento do localStorage */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *:before,
+html.theme-transition *:after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+  transition-delay: 0s !important;
 }
