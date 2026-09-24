@@ -58,9 +58,8 @@ não expor a linguagem que o backend foi escrito
 
 # CHECKLIST
 - [ ] Descobrir como replicar o header pro site todo
-- [ ] Fazer parte do calendário com embbed pra google agenda ou pra planilha do calendário
-- [ ] Fazer parte da crisma com sessão de confissão (mais urgente)
-- [ ] Inicialmente, hospedar a versão 1.0 (apenas com features estáticas) no GitHub Pages ou Netlify ou Vercel
+- [ ] Fazer calendário aproveitando planilha do calendário
+- [ ] Fazer parte da crisma com sessão de confissão 
 
 # 🔴 O que é MUITO DIFÍCIL e deve ficar para a Versão 2.0 (Alerta)
 
