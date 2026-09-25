@@ -11567,30 +11567,39 @@ section#contact form#contactForm :-ms-input-placeholder {
     color: #e9ecef !important;
 }
 
-/* Por padrão, esconde a imagem do modo escuro */
-.img-dark-mode {
+/* 1. COMPORTAMENTO PADRÃO DO SITE (Tema Claro) */
+/* Esconde nativamente os elementos do modo escuro */
+.img-dark-mode,
+.btn-dark-mode {
   display: none !important;
 }
 
-/* Quando o tema escuro estiver ativo, inverte a exibição de imagem e botões */
-body.dark-theme .img-light-mode,
-[data-theme="dark"] .img-light-mode {
-  display: none !important;
+/* Garante a exibição nativa dos elementos do modo claro */
+.img-light-mode {
+  display: block !important;
 }
 
+.btn-light-mode {
+  display: inline-block !important;
+}
+
+/* 2. QUANDO O TEMA ESCURO FOR ATIVADO VIA CLASSE OU DATA-ATTRIBUTE */
 body.dark-theme .img-dark-mode,
 [data-theme="dark"] .img-dark-mode {
   display: block !important;
 }
 
-body.dark-theme .btn-light-mode,
-[data-theme="dark"] .btn-light-mode {
-  display: none !important;
-}
-
 body.dark-theme .btn-dark-mode,
 [data-theme="dark"] .btn-dark-mode {
   display: inline-block !important;
+}
+
+/* Esconde os elementos do modo claro */
+body.dark-theme .img-light-mode,
+[data-theme="dark"] .img-light-mode,
+body.dark-theme .btn-light-mode,
+[data-theme="dark"] .btn-light-mode {
+  display: none !important;
 }
 
 [data-theme="dark"] .timeline > li .timeline-image {
