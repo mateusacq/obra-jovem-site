@@ -8195,6 +8195,11 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.bg-dark-mode {
+  --bs-bg-opacity: 1;
+  background-color: #121212 !important;
+}
+
 .bg-black {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
@@ -11597,6 +11602,7 @@ body.dark-theme .btn-dark-mode,
 [data-theme="dark"] .timeline-media .media-thumb {
     border: 2px solid #ffc800;
 }
+
 /* Suaviza a transição de cores e fundos nos elementos principais */
 body,
 .page-section,

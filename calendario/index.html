@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página indisponível</title>
-</head>
-<body>
-
-    <h1>Esta página está indisponível no momento.</h1>
-    <p>Ainda estamos trabalhando nela. Volte depois para vê-la funcionando!<br> <a href="/">Clique aqui para voltar para a página inicial.</a></p>
-
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Calendário da Obra Jovem" />
+        <meta name="author" content="" />
+        <title>Obra Jovem DP</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Font Awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+        <!-- Outras fontes definidas no styles.css-->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script>
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        </script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html"><img src="../assets/img/navbar-oj-logo4.svg" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="theme-toggle" aria-label="Alternar tema">
+                                <i class="fas fa-moon fs-5"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header>
+            <div class="container mt-5">
+                <h1><br><br></h1>
+                <h2>Calendário de Eventos</h2>
+                <!-- O Javascript vai injetar os dados aqui dentro -->
+                <div id="tabela-calendario" class="table-responsive">
+                    <p>Carregando calendário...</p>
+                </div>
+            </div>
+        </header>
+        <!-- Footer-->
+        <footer class="footer py-4 bg-dark">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start"> </div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <div class="d-flex justify-content-center align-items-center gap-2 mb-4">
+                            <a class="btn btn-warning text-uppercase rounded-pill px-3" href="https://www.instagram.com/kayrosdp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram me-2"></i>
+                                Instagram
+                            </a>
+                            <a class="btn btn-warning text-uppercase rounded-pill px-3" href="mailto:obrajovemdivinaprovidencia@gmail.com">
+                                <i class="fas fa-envelope me-2"></i>
+                                E-mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+        <script src="./js/load_calendar.js"></script>
+    </body>
 </html>
